@@ -1,12 +1,15 @@
 module FunWithStrings
   def palindrome?
-    # your code here
+    s = self.downcase.gsub(/\W/,"")
+    s == s.reverse
   end
   def count_words
-    # your code here
+    h = Hash.new(0)
+    self.split(/\W/).select {|w| !w.empty?}.each {|w| h[w.downcase] += 1}
+    h
   end
   def anagram_groups
-    # your code here
+    self.split.group_by {|w| w.downcase.chars.sort}.values
   end
 end
 
