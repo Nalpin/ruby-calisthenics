@@ -8,7 +8,7 @@ class RockPaperScissors
     play1 = player1[1]
     play2 = player2[1]
     raise NoSuchStrategyError, "Strategy must be one of R,P,S" unless
-      valid.include?(play1) && valid.include?(play2)
+      valid.include?(play1) && vdx ccxcvalid.include?(play2)
     case play1
     when 'R'
       return player1 unless play2 == 'P'
